@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SCT Chennai | Quality Dash Board - 2026</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* SETTINGS BUTTON */
+.settings-btn {
+    background-color: #002060;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.settings-btn:hover {
+    background-color: #003399;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 50px 80px;
+}
+
+/* BUTTON BOX */
+.card {
+    background-color: #002060;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background-color: #003399;
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+    <div class="title">
+        SCT Chennai | Quality Dash Board - 2026
+    </div>
+
+    <!-- SETTINGS BUTTON -->
+    <div class="settings-btn" onclick="location.href='settings'">
+        ⚙ Settings
+    </div>
+</div>
+
+<!-- BUTTON GRID -->
+<div class="container">
+
+    <div class="card" onclick="location.href='{{ url_for('customer_score_card') }}'">
+    Customer Score<br>Card
+    </div>
+
+    <div class="card" onclick="location.href='{{ url_for('customer_complaints') }}'">    
+        No of Customer<br>Complaints
+    </div>
+
+    <div class="card" onclick="location.href='{{ url_for('customer_ppm') }}'">     
+        Customer PPM
+    </div>
+
+    <div class="card" onclick="location.href='{{ url_for('warranty_complaints') }}'"> 
+        No of Warranty<br>Complaints
+    </div>
+
+    <div class="card" onclick="location.href='{{ url_for('warranty_chargeback') }}'"> 
+        Warranty Charge<br>back
+    </div>
+
+    <div class="card" onclick="location.href='{{ url_for('sales_return') }}'"> 
+        Sales Return
+    </div>
+
+    <div class="card" onclick="location.href='{{ url_for('informal_complaints') }}'"> 
+        In-formal<br>Complaints
+    </div>
+
+    <div class="card" onclick="location.href='voice_of_customer'">
+        Voice of<br>Customer
+    </div>
+
+</div>
+
+</body>
+</html>

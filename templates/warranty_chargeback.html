@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Warranty Charge back Cost</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body { margin:0; font-family: Arial; }
+.header { display:flex; align-items:center; padding:8px 20px; border-bottom:2px solid black; }
+.logo img { height:45px; }
+.title { flex:1; text-align:center; font-size:20px; font-weight:bold; }
+.container { padding:15px 30px; }
+.chart-box { width:100%; height:260px; }
+table { width:100%; border-collapse:collapse; margin-top:15px; text-align:center; }
+th, td { border:1px solid black; padding:6px; }
+th { background:#e6e6e6; }
+.back-btn { margin-top:12px; padding:8px 18px; cursor:pointer; }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.png') }}">
+    </div>
+    <div class="title">warranty_chargeback</div>
+</div>
+
+
+<div class="container">
+
+{% set months = {
+    "Jan'26":"jan", "Feb'26":"feb", "Mar'26":"mar", "Apr'26":"apr",
+    "May'26":"may", "Jun'26":"jun", "Jul'26":"jul", "Aug'26":"aug",
+    "Sep'26":"sep", "Oct'26":"oct", "Nov'26":"nov", "Dec'26":"dec"
+} %}
+
+<div class="chart-box">
+    <canvas id="wcbChart"></canvas>
+</div>
+
+<table>
+
+<tr>
+    <th></th>
+    {% for label in months.keys() %}
+        <th>{{ label }}</th>
+    {% endfor %}
+    <th>YTD'26</th>
+</tr>
+
+{% for row in ["WCB Cost", "Target"] %}
+<tr>
+    <td><b>{{ row }}</b></td>
+    {% for col in months.values() %}
+        <td>{{ data.get(row, {}).get(col, 0) }}</td>
+    {% endfor %}
+    <td>{{ data.get(row, {}).get('ytd', 0) }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<button class="back-btn" onclick="location.href='{{ url_for('index') }}'">
+⬅ Back to Dashboard
+</button>
+
+</div>
+
+<script>
+const ctx = document.getElementById('wcbChart').getContext('2d');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["Jan'26","Feb'26","Mar'26","Apr'26","May'26","Jun'26",
+                 "Jul'26","Aug'26","Sep'26","Oct'26","Nov'26","Dec'26"],
+        datasets: [
+            {
+                label: 'WCB Cost',
+                data: [
+                {% for col in months.values() %}
+                    {{ data.get('WCB Cost', {}).get(col, 0) }},
+                {% endfor %}
+                ],
+                borderColor: 'blue',
+                borderWidth: 2,
+                fill: false
+            },
+            {
+                label: 'Target',
+                data: [
+                {% for col in months.values() %}
+                    {{ data.get('Target', {}).get(col, 0) }},
+                {% endfor %}
+                ],
+                borderColor: 'orange',
+                borderWidth: 2,
+                fill: false
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
