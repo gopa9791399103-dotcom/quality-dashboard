@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 import mysql.connector
 
@@ -273,9 +274,9 @@ def get_data():
 # ---------------- RUN ----------------
 if __name__ == "__main__":
 
-    import os
 
 port = int(os.environ.get("PORT", 5005))
 
 
 app.run(host="0.0.0.0", port=port)
+
