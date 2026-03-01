@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SCT Chennai | Quality Dash Board - 2026</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 50px 80px;
+}
+
+/* BUTTON BOX */
+.card {
+    background-color: #002060;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background-color: #003399;
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">
+        <img src="logo.png" alt="Company Logo">
+    </div>
+    <div class="title">SCT Chennai | Quality Dash Board - 2026</div>
+</div>
+
+<!-- BUTTON GRID -->
+<div class="container">
+
+    <div class="card" onclick="location.href='customer_scorecard.html'">
+        Customer Score<br>Card
+    </div>
+
+    <div class="card" onclick="location.href='customer_complaints.html'">
+        No of Customer<br>Complaints
+    </div>
+
+    <div class="card" onclick="location.href='customer_ppm.html'">
+        Customer PPM
+    </div>
+
+    <div class="card" onclick="location.href='warranty_complaints.html'">
+        No of Warranty<br>Complaints
+    </div>
+
+    <div class="card" onclick="location.href='warranty_chargeback.html'">
+        Warranty Charge<br>back
+    </div>
+
+    <div class="card" onclick="location.href='sales_return.html'">
+        Sales Return
+    </div>
+
+    <div class="card" onclick="location.href='informal_complaints.html'">
+        In-formal<br>Complaints
+    </div>
+
+    <div class="card" onclick="location.href='voice_of_customer.html'">
+        Voice of<br>Customer
+    </div>
+
+</div>
+
+</body>
+</html>

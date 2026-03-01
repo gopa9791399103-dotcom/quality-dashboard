@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quality Input - 2026</title>
+
+<style>
+body { font-family: Arial; margin:0; }
+.header { display:flex; padding:10px 20px; border-bottom:2px solid black; }
+.title { flex:1; text-align:center; font-size:22px; font-weight:bold; }
+.container { padding:20px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; }
+th, td { border:1px solid black; padding:6px; text-align:center; }
+th { background:#e6e6e6; }
+.section { background:#f2f2f2; font-weight:bold; text-align:left; }
+.parameter { background:#e6e6e6; font-weight:bold; text-align:left; }
+input { width:100%; border:none; text-align:center; }
+.ytd { background:#f2f2f2; font-weight:bold; }
+button { margin-top:20px; padding:10px 30px; background:#002060; color:white; border:none; font-weight:bold; }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="title">Quality Input – 2026</div>
+</div>
+
+<div class="container">
+
+<form id="qualityForm">
+<table>
+
+<tr>
+<th>Section</th>
+<th>Parameter</th>
+<th>Jan'26</th><th>Feb'26</th><th>Mar'26</th><th>Apr'26</th>
+<th>May'26</th><th>Jun'26</th><th>Jul'26</th><th>Aug'26</th>
+<th>Sep'26</th><th>Oct'26</th><th>Nov'26</th><th>Dec'26</th>
+<th>YTD'26</th>
+</tr>
+
+{% for section, params in structure.items() %}
+    {% for param in params %}
+    <tr>
+        {% if loop.first %}
+        <td class="section" rowspan="{{ params|length }}">{{ section }}</td>
+        {% endif %}
+
+        <td class="parameter">{{ param }}</td>
+
+        {% for month in ["Jan'26","Feb'26","Mar'26","Apr'26","May'26","Jun'26",
+                         "Jul'26","Aug'26","Sep'26","Oct'26","Nov'26","Dec'26"] %}
+        <td>
+            <input data-section="{{ section }}"
+                   data-parameter="{{ param }}"
+                   data-month="{{ month }}">
+        </td>
+        {% endfor %}
+
+        <td>
+            <input readonly class="ytd"
+                   data-section="{{ section }}"
+                   data-parameter="{{ param }}"
+                   data-month="YTD'26">
+        </td>
+    </tr>
+    {% endfor %}
+{% endfor %}
+
+</table>
+
+<button type="submit">Submit</button>
+</form>
+
+</div>
+
+<script>
+
+// SAVE DATA
+document.getElementById('qualityForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = [];
+    const inputs = document.querySelectorAll('input:not([readonly])');
+
+    inputs.forEach(input => {
+        if(input.value.trim() !== '') {
+            formData.push({
+                section: input.dataset.section,
+                parameter: input.dataset.parameter,
+                month: input.dataset.month,
+                value: input.value
+            });
+        }
+    });
+
+    const response = await fetch('/submit_data', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    loadData();
+});
+
+
+// LOAD DATA
+async function loadData(){
+    const response = await fetch('/get_data');
+    const data = await response.json();
+
+    document.querySelectorAll('input').forEach(i => i.value='');
+
+    data.forEach(row => {
+
+        const months = [
+            {key:"jan",label:"Jan'26"},
+            {key:"feb",label:"Feb'26"},
+            {key:"mar",label:"Mar'26"},
+            {key:"apr",label:"Apr'26"},
+            {key:"may",label:"May'26"},
+            {key:"jun",label:"Jun'26"},
+            {key:"jul",label:"Jul'26"},
+            {key:"aug",label:"Aug'26"},
+            {key:"sep",label:"Sep'26"},
+            {key:"oct",label:"Oct'26"},
+            {key:"nov",label:"Nov'26"},
+            {key:"dec",label:"Dec'26"},
+            {key:"ytd",label:"YTD'26"}
+        ];
+
+        months.forEach(m=>{
+            const input=document.querySelector(
+            `input[data-section="${row.section}"][data-parameter="${row.parameter}"][data-month="${m.label}"]`
+            );
+            if(input){ input.value=row[m.key]; }
+        });
+    });
+}
+
+window.onload = loadData;
+
+</script>
+<button class="back-btn" onclick="location.href='{{ url_for('index') }}'">
+    ⬅ Back to Dashboard
+</button>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quality Input - 2026</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    display:flex;
+    align-items:center;
+    padding:10px 20px;
+    border-bottom:2px solid black;
+}
+.logo img{
+    height:45px;
+}
+.title{
+    flex:1;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+.container{
+    padding:20px;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+th, td{
+    border:1px solid black;
+    padding:6px;
+    text-align:center;
+}
+th{
+    background:#e6e6e6;
+}
+.section{
+    background:#f2f2f2;
+    font-weight:bold;
+    text-align:left;
+    width:220px;
+}
+.parameter{
+    background:#e6e6e6;
+    font-weight:bold;
+    text-align:left;
+    width:180px;
+}
+input{
+    width:100%;
+    border:none;
+    text-align:center;
+    padding:4px 0;
+}
+.ytd{
+    background:#f2f2f2;
+    font-weight:bold;
+}
+button{
+    margin-top:20px;
+    padding:10px 30px;
+    background:#002060;
+    color:white;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+button:hover{
+    background:#001a47;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <div class="title">Quality Input – 2026</div>
+</div>
+
+<div class="container">
+
+<form id="qualityForm">
+<table>
+<tr>
+<th class="section">Section</th>
+<th class="parameter">Parameter</th>
+<th>Jan'26</th><th>Feb'26</th><th>Mar'26</th><th>Apr'26</th>
+<th>May'26</th><th>Jun'26</th><th>Jul'26</th><th>Aug'26</th>
+<th>Sep'26</th><th>Oct'26</th><th>Nov'26</th><th>Dec'26</th>
+<th>YTD'26</th>
+</tr>
+
+<!-- Customer Score Card -->
+<tr>
+<td class="section" rowspan="7">Customer Score card</td>
+<td class="parameter">RENAULT</td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Jan'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Feb'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Mar'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Apr'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="May'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Jun'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Jul'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Aug'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Sep'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Oct'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Nov'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="Dec'26"></td>
+<td><input data-section="Customer Score card" data-parameter="RENAULT" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">NISSAN</td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Jan'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Feb'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Mar'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Apr'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="May'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Jun'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Jul'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Aug'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Sep'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Oct'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Nov'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="Dec'26"></td>
+<td><input data-section="Customer Score card" data-parameter="NISSAN" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">PSA</td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Jan'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Feb'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Mar'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Apr'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="May'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Jun'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Jul'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Aug'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Sep'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Oct'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Nov'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="Dec'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">PSA AVTECH</td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Jan'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Feb'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Mar'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Apr'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="May'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Jun'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Jul'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Aug'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Sep'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Oct'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Nov'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="Dec'26"></td>
+<td><input data-section="Customer Score card" data-parameter="PSA AVTECH" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">DAIMLER</td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Jan'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Feb'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Mar'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Apr'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="May'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Jun'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Jul'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Aug'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Sep'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Oct'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Nov'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="Dec'26"></td>
+<td><input data-section="Customer Score card" data-parameter="DAIMLER" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">ALF</td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Jan'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Feb'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Mar'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Apr'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="May'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Jun'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Jul'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Aug'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Sep'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Oct'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Nov'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="Dec'26"></td>
+<td><input data-section="Customer Score card" data-parameter="ALF" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">GESTAMP</td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Jan'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Feb'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Mar'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Apr'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="May'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Jun'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Jul'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Aug'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Sep'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Oct'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Nov'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="Dec'26"></td>
+<td><input data-section="Customer Score card" data-parameter="GESTAMP" data-month="YTD'26"></td>
+</tr>
+
+<!-- No of Customer Complaints -->
+<tr>
+<td class="section" rowspan="2">No of Customer Complaints</td>
+<td class="parameter">No of Complaints</td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Jan'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Feb'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Mar'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Apr'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="May'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Jun'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Jul'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Aug'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Sep'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Oct'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Nov'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="Dec'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="No of Complaints" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Target</td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Jan'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Feb'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Mar'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Apr'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="May'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Jun'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Jul'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Aug'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Sep'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Oct'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Nov'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="Dec'26"></td>
+<td><input data-section="No of Customer Complaints" data-parameter="Target" data-month="YTD'26"></td>
+</tr>
+
+<!-- Customer PPM -->
+<tr>
+<td class="section" rowspan="4">Customer PPM</td>
+<td class="parameter">Rej Qty</td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Jan'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Feb'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Mar'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Apr'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="May'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Jun'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Jul'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Aug'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Sep'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Oct'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Nov'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="Dec'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Rej Qty" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Supplied Qty</td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Jan'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Feb'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Mar'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Apr'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="May'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Jun'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Jul'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Aug'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Sep'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Oct'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Nov'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="Dec'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Supplied Qty" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">PPM</td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Jan'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Feb'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Mar'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Apr'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="May'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Jun'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Jul'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Aug'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Sep'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Oct'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Nov'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="Dec'26"></td>
+<td><input data-section="Customer PPM" data-parameter="PPM" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Target</td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Jan'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Feb'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Mar'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Apr'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="May'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Jun'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Jul'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Aug'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Sep'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Oct'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Nov'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="Dec'26"></td>
+<td><input data-section="Customer PPM" data-parameter="Target" data-month="YTD'26"></td>
+</tr>
+
+<!-- No of Warranty Complaints -->
+<tr>
+<td class="section" rowspan="2">No of Warranty Complaints</td>
+<td class="parameter">No of Complaints</td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Jan'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Feb'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Mar'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Apr'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="May'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Jun'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Jul'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Aug'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Sep'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Oct'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Nov'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="Dec'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="No of Complaints" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Target</td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Jan'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Feb'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Mar'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Apr'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="May'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Jun'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Jul'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Aug'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Sep'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Oct'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Nov'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="Dec'26"></td>
+<td><input data-section="No of Warranty Complaints" data-parameter="Target" data-month="YTD'26"></td>
+</tr>
+
+<!-- Warranty Charge back -->
+<tr>
+<td class="section" rowspan="2">Warranty Charge back</td>
+<td class="parameter">WCB Cost</td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Jan'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Feb'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Mar'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Apr'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="May'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Jun'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Jul'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Aug'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Sep'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Oct'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Nov'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="Dec'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="WCB Cost" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Target</td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Jan'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Feb'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Mar'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Apr'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="May'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Jun'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Jul'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Aug'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Sep'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Oct'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Nov'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="Dec'26"></td>
+<td><input data-section="Warranty Charge back" data-parameter="Target" data-month="YTD'26"></td>
+</tr>
+
+<!-- Sales Return -->
+<tr>
+<td class="section" rowspan="3">Sales Return</td>
+<td class="parameter">Sales Rtn Qty</td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Jan'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Feb'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Mar'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Apr'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="May'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Jun'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Jul'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Aug'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Sep'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Oct'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Nov'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="Dec'26"></td>
+<td><input data-section="Sales Return" data-parameter="Sales Rtn Qty" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Cost</td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Jan'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Feb'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Mar'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Apr'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="May'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Jun'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Jul'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Aug'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Sep'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Oct'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Nov'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="Dec'26"></td>
+<td><input data-section="Sales Return" data-parameter="Cost" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Target</td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Jan'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Feb'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Mar'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Apr'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="May'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Jun'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Jul'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Aug'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Sep'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Oct'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Nov'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="Dec'26"></td>
+<td><input data-section="Sales Return" data-parameter="Target" data-month="YTD'26"></td>
+</tr>
+
+<!-- Inform Complaint -->
+<tr>
+<td class="section" rowspan="2">Inform Complaint</td>
+<td class="parameter">No of Complaints</td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Jan'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Feb'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Mar'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Apr'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="May'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Jun'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Jul'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Aug'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Sep'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Oct'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Nov'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="Dec'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="No of Complaints" data-month="YTD'26"></td>
+</tr>
+<tr>
+<td class="parameter">Target</td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Jan'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Feb'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Mar'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Apr'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="May'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Jun'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Jul'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Aug'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Sep'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Oct'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Nov'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="Dec'26"></td>
+<td><input data-section="Inform Complaint" data-parameter="Target" data-month="YTD'26"></td>
+</tr>
+
+</table>
+
+<button type="submit">Submit</button>
+</form>
+
+</div>
+
+<script>
+document.getElementById('qualityForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const formData = [];
+  const inputs = document.querySelectorAll('input');
+  
+  inputs.forEach(input => {
+    if(input.value.trim() !== '') {
+      formData.push({
+        section: input.getAttribute('data-section'),
+        parameter: input.getAttribute('data-parameter'),
+        month: input.getAttribute('data-month'),
+        value: input.value
+      });
+    }
+  });
+  
+  try {
+    const response = await fetch('/submit_data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    const result = await response.json();
+    alert(result.message);
+  } catch (error) {
+    alert('Error submitting data: ' + error);
+  }
+});
+</script>
+<script>
+window.onload = async function() {
+    try {
+        const response = await fetch('/get_data');
+        const data = await response.json();
+
+        data.forEach(row => {
+            const section = row.section;
+            const parameter = row.parameter;
+
+            const months = [
+                {key: "jan", label: "Jan'26"},
+                {key: "feb", label: "Feb'26"},
+                {key: "mar", label: "Mar'26"},
+                {key: "apr", label: "Apr'26"},
+                {key: "may", label: "May'26"},
+                {key: "jun", label: "Jun'26"},
+                {key: "jul", label: "Jul'26"},
+                {key: "aug", label: "Aug'26"},
+                {key: "sep", label: "Sep'26"},
+                {key: "oct", label: "Oct'26"},
+                {key: "nov", label: "Nov'26"},
+                {key: "dec", label: "Dec'26"},
+                {key: "ytd", label: "YTD'26"}
+            ];
+
+            months.forEach(m => {
+                const input = document.querySelector(
+                    `input[data-section="${section}"][data-parameter="${parameter}"][data-month="${m.label}"]`
+                );
+
+                if(input && row[m.key] !== null){
+                    input.value = row[m.key];
+                }
+            });
+
+        });
+
+    } catch(error) {
+        console.log("Load error:", error);
+    }
+};
+</script>
+
+</body>
+</html>
